@@ -13,14 +13,14 @@
 
     <!-- Font Family Link -->
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
-
+      <!-- animate css library  -->
+      <link rel="stylesheet" href="css/animate.min.css">
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-
     <!-- Page Style Link -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -69,7 +69,7 @@
 
             <div class="header-content my-5 py-2">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 wow animate__animated animate__backInLeft">
                         <div class="header-info" id="about">
                             <h2 class="main-color mb-4">Weather App</h2>
                             <p>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 wow animate__animated animate__backInRight">
                         <div class="header-img">
                             <img src="images/raining-animate-1.svg" class="img-fluid" />
                         </div>
@@ -99,14 +99,14 @@
     <!------------------------ Start Display Temp ------------------------>
     <section class="display-temp my-5 py-2" id="search">
         <div class="container">
-            <div class="search m-auto">
+            <div class="search m-auto wow animate__animated animate__slideInDown">
                 <input type="text" id="search-bar" class="w-100 mb-5" placeholder="&#xF002; Search City..."
                     style="font-family:Arial, FontAwesome" />
             </div>
             <div class="city-temp d-flex">
 
                 <!-- Today's Card -->
-                <div class="temp-card shadow">
+                <div class="temp-card shadow wow animate__animated animate__bounceInLeft ">
                     <div class="day-and-date d-flex justify-content-between">
                         <p id="today"></p>
                         <p id="today-date"></p>
@@ -136,7 +136,7 @@
                 </div>
 
                 <!-- Next Days Cards -->
-                <div class="temp-card text-center shadow">
+                <div class="temp-card text-center shadow wow animate__animated animate__bounceInDown" data-wow-delay="1s">
                     <div class="day-and-date d-flex justify-content-between">
                         <p class="nextDay"></p>
                         <p class="nextDate"></p>
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="temp-card text-center shadow">
+                <div class="temp-card text-center shadow wow animate__animated animate__bounceInRight" data-wow-delay="2s">
                     <div class="day-and-date d-flex justify-content-between">
                         <p class="nextDay"></p>
                         <p class="nextDate"></p>
@@ -182,12 +182,12 @@
     <section class="download-app py-3 my-5" id="mobileApp">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 wow animate__animated animate__bounceInLeft" data-wow-delay="1s">
                     <div class="download-img text-center">
                         <img class="img-fluid" src="images/download.png">
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 wow animate__animated animate__bounceInRight" data-wow-delay="1s">
                     <div class="download-info text-center mt-5">
                         <h4 class="main-color mb-4">Mobile App</h4>
                         <p class="mb-4">
@@ -216,9 +216,9 @@
     <section class="subscribe text-center my-5 py-5" id="subscribe">
         <div class="container">
             <div class="subscribe-container d-flex">
-                <div class="subscribe-info pt-5">
+                <div class="subscribe-info pt-5 wow animate__animated animate__backInLeft">
                     <div>
-                        <h4 class="main-color">Subscribe</h4>
+                        <h4 class="main-color wow animate__animated animate__zoomIn" data-wow-delay="1s">Subscribe</h4>
                         <p>Get daily weather updates, quotes & more..</p>
                     </div>
                     <input class="w-75" id="emailInput" type="mail"
@@ -226,9 +226,9 @@
                     <div id="emailInputAlert" class="d-none text-danger my-3">
                         Invalid Email Address!
                     </div>
-                    <button class="btn btn-info d-block mx-auto my-3" id="subscribeBtn">Subscribe</button>
+                    <button class="btn btn-info d-block mx-auto my-3 wow animate__animated animate__zoomIn" data-wow-delay="1s" id="subscribeBtn">Subscribe</button>
                 </div>
-                <div class="subscribe-img">
+                <div class="subscribe-img wow animate__animated animate__rotateInUpRight">
                     <img class="img-fluid w-75 ml-5" src="images/subscribe.png">
                 </div>
             </div>
@@ -273,14 +273,18 @@
     </div>
     <!------------------------ End To Top Arrow ------------------------>
 
-
-
+    <!-- firing wow js animation -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <!-- JQuery Link -->
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <!-- Popper Link -->
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap Link -->
     <script src="js/bootstrap.min.js"></script>
+   
     <!-- Page Main Script Link -->
     <script src="js/main.js"></script>
 </body>
